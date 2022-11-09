@@ -50,7 +50,7 @@
 
 //     // Overriding
 //     getDetails() {
-//         return `${this.studId} - ${super.getDetails()}  
+//         return `${this.studId} - ${super.getDetails()}
 //         Course : ${this.enrolledCourse}`
 //     }
 // }
@@ -125,22 +125,25 @@
 
 
 
-let userOne = {
-    email: "john@test",
-    age: 32,
-    address: {
-        city: "Bengaluru",
-        street: "201 Main Road, Marathahalli"
-    }
-}
+// let userOne = {
+//     email: "john@test",
+//     age: 32,
+//     address: {
+//         city: "Bengaluru",
+//         street: "201 Main Road, Marathahalli"
+//     }
+// }
+
+// DEEP COPY
+// const userTwo = JSON.parse(JSON.stringify(userOne))
+
+// userTwo.address.city = "Mumbai";
+
+// console.log(userOne);
 
 
-const userTwo = JSON.parse(JSON.stringify(userOne))
 
-userTwo.address.city = "Mumbai";
-
-console.log(userOne);
-
+// SHALLOW COPY
 // let userTwo = {
 //     ...userOne,
 //     ...userOne.address
@@ -150,8 +153,9 @@ console.log(userOne);
 
 // console.log(userOne);
 
-// CREATES SHALLOW COPY
 
+
+// CREATES SHALLOW COPY AGAIN
 // let userTwo = {
 //     ...userOne,
 //     age: 34
@@ -168,4 +172,208 @@ console.log(userOne);
 // console.log("USER ONE : ", userOne);
 
 
-// Deep copy and Shallow Copy
+// let users = [
+//     {email : "john@test", age : 32},
+//     {email : "jenny@test", age : 34},
+//     {email : "jill@test", age : 36}
+// ]
+
+
+
+
+
+
+
+
+
+// DESTRUCTURING
+
+//  - ARRAY: Creates SHALLOW copy
+
+// let fruits = ["apple", "banana", "grapes", "kiwi"];
+
+// let [, f2, f3, f4, f5] = fruits;
+
+// console.log(f2);
+
+// fruits[1] = "orange";
+
+// console.log(f5)              // ?
+
+// let friends = [
+//     { name: "Monica", age: 29 },
+//     { name: "Joe", age: 30 },
+//     { name: "Ross", age: 31 },
+// ]
+
+
+// let [f1, f2, f3] = friends;
+
+// f1.name = "Rachel";
+
+// console.log(friends);
+
+
+
+// OBJECT - unorganized
+
+// let userOne = {
+//     name: "John Doe",
+//     age: 32
+// }
+
+// let userTwo = {
+//     name: "Jenny Doe",
+//     age: 34
+// }
+
+// let { name: n2, age: a2 } = userTwo;
+
+// let { name: n1, age: a1 } = userOne;
+
+// console.log(n2, a1);                // ?
+
+
+// let user = {
+//     email : "john@test",
+//     isAdmin : true,
+//     address : {
+//         city : "Pune",
+//         street : "201 Main Road, Wakad"
+//     },
+//     friends : ["Monica", "Joe"]
+// }
+
+// let {
+//     email,
+//     isAdmin,
+//     address : {
+//         city,
+//         street
+//     },
+//     friends : [f1, f2]
+// } = user;
+
+// let friends = [
+//     {name : "Monica", age : 28},
+//     {name : "Joe", age : 29},
+//     {name : "Ross", age : 30}
+// ]
+
+// let [
+//     {name : n1, age : a1},
+//     {name : n2, age : a2},
+//     {name : n3, age : a3},
+// ] = friends;
+
+
+
+
+
+
+
+
+
+// let obj = {
+//     key: "value"
+// }
+
+// let user = {
+//     "name": "John",
+//     age: 32,
+//     true: 1,
+//     101: "pages",
+//     obj: "value 1"
+// }
+
+
+// console.log(user);
+
+// MAP
+// - object keys are always strings, but map's need not.
+// - provides API to deal with map object
+// - maps are iterables
+// - is source object (key) is deleted, 
+// there will not be any associated data in map
+
+
+
+// let user = {
+//     id: "u001"
+// }
+
+// let map = new Map();
+
+// map.set("name", "John Doe")
+// map.set("age", 32)
+// map.set(101, "number of pages")
+// map.set(true, "this is admin")
+// map.set(user, "John Doe")
+
+
+// console.log(map.size);          // 
+
+// console.log(map.get(101));
+
+// console.log(map.get(true));
+
+// console.log(map.get(user));
+
+// user = null;
+
+// console.log(map.get(user));         // << undefined
+
+
+// let map = new Map()
+
+// map.set("name", "John");
+// map.set("email", "John@test");
+// map.set("age", 32);
+
+
+// if (map.has("name")) {
+//     console.log("Do something");
+// } else {
+//     console.log("Do something else");
+// }
+
+
+// map.delete("name");
+
+// console.log(map.size);          // ?
+
+// map.clear();
+// console.log(map.size);          // << ?
+
+
+// for (let [key, value] of map) {
+//     console.log(key + " - " + value);
+// }
+
+
+
+// SET
+// - allows only unique values
+
+let obj = {
+    id: "o001"
+}
+
+let set = new Set();
+
+set.add("john")
+set.add("jenny")
+set.add("jill")
+set.add("john")
+set.add(obj);
+
+
+console.log(set.size)
+
+obj = null;
+
+console.log(set.size);
+
+for (let value of set) {
+    console.log(value);
+}
