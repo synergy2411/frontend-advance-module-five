@@ -354,6 +354,8 @@
 
 // SET
 // - allows only unique values
+// - if source object is deleted,
+// the value still exits in Set
 
 let obj = {
     id: "o001"
@@ -367,8 +369,10 @@ set.add("jill")
 set.add("john")
 set.add(obj);
 
-
 console.log(set.size)
+
+set.add(null)
+set.add(null)
 
 obj = null;
 
