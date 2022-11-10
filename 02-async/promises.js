@@ -35,13 +35,57 @@ const buildPromise = (arr) => {
 
 // Consumer Code 02- async...await
 
-const consumePromise = async () => {
+// const consumePromise = async () => {
+//     try {
+//         let response = await buildPromise([1, 2])         // << wait till promise resolved
+//         console.log(response);
+//     } catch (err) {
+//         console.error(err)
+//     }
+// }
+
+// consumePromise()
+
+
+
+
+
+// Create a 'delay' function that
+// - accepts the 'ms' parameter
+// - returns the promise object
+// - if 'ms' is > 2000, then promise is resolved after 'ms' time
+// - otherwise promise will be rejected
+// - implement both promise consumer version
+// - then...catch
+// - async...await
+
+
+const delay = (ms) => {
+    const pObj = new Promise(function (resolve, reject) {
+        if (ms > 2000) {
+            setTimeout(() => {
+                resolve("RESOLVED")
+            }, ms)
+        } else {
+            reject("REJECTED")
+        }
+    });
+    return pObj;
+}
+
+// const consumePromiseDelay = () => {
+//     delay(2000)
+//         .then(response => console.log(response))
+//         .catch(err => console.error(err))
+// }
+
+const consumePromiseDelay = async () => {
     try {
-        let response = await buildPromise([1, 2])         // << wait till promise resolved
+        const response = await delay(1000);
         console.log(response);
     } catch (err) {
-        console.error(err)
+        console.error(err);
     }
 }
 
-consumePromise()
+consumePromiseDelay()
