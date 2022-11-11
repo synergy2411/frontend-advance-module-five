@@ -61,3 +61,6 @@ btnGetRepos.addEventListener("click", async function () {
 
 // Vaccinated 01 : ....
 // Vaccinated 02 : ....
+
+
+// camel_case -> camelCase
