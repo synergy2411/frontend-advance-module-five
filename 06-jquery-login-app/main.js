@@ -8,8 +8,8 @@ $(document).ready(function () {
 
         $.get("http://localhost:3000/users", function (data, status) {
             if (status === 'success') {
-                const foundUser = data.filter(user => user.username === usernameVal && user.password === passwordVal)
-                if (foundUser.length > 0) {
+                const foundUser = data.find(user => user.username === usernameVal && user.password === passwordVal)
+                if (foundUser) {
                     $(".result").text("Logged In!!")
                 } else {
                     $(".result").text("Bad Credentials")
