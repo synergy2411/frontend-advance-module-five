@@ -1,4 +1,26 @@
 $(document).ready(function () {
+
+    // Login
+    $(".btn-login").click(function (event) {
+        event.preventDefault();
+        let usernameVal = $("#username").val()
+        let passwordVal = $("#password").val()
+
+        $.get("http://localhost:3000/users", function (data, status) {
+            if (status === 'success') {
+                const foundUser = data.filter(user => user.username === usernameVal && user.password === passwordVal)
+                if (foundUser.length > 0) {
+                    $(".result").text("Logged In!!")
+                } else {
+                    $(".result").text("Bad Credentials")
+                }
+            } else {
+                console.log("NOT FOUND");
+            }
+        })
+    })
+
+    // Sign up
     $(".btn-sign-up").click(function () {
         let usernameVal = $("#username").val();
         let passwordVal = $("#password").val();
