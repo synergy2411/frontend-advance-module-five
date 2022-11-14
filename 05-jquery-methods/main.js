@@ -1,10 +1,47 @@
 $(document).ready(function () {
 
-    // jQuery LOAD
+
+    // jQuery POST -> to create the data
     $("#btnGetData").click(function () {
-        let divEl = $("#content");
-        divEl.load("response.html");
+        $.post("https://jsonplaceholder.typicode.com/posts", { title: "NEW TITLE", body: "..." }, function (data, status, xhr) {
+            console.log("STATUS : ", status)
+        })
     })
+
+    // jQuery GET -> to retrive the data
+    // $("#btnGetData").click(function () {
+    //     $.get("https://jsonplaceholder.typicode.com/posts", function (data, status, xhr) {
+    //         data.forEach(post => {
+    //             $(".list-container").append(`<li>${post.title}</li>`)
+    //         })
+    //     })
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // jQuery LOAD
+    // $("#btnGetData").click(function () {
+    //     let divEl = $("#content");
+    //     divEl.load("response.html .content", function (data, status, xhr) {
+    //         if (status === 'success') {
+    //             $("#btnGetData").css("background", "teal")
+    //             $("#btnGetData").css("color", "#fff")
+    //         }
+    //         // alert("COMPLETED")
+    //     });
+    // })
 
 
 
