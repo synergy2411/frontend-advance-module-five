@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User</title>
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css"
+      integrity="sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Github App</h1>
+      <input type="text" id="txt-username" />
+      <button id="btnFetch">Fetch User</button>
+
+      <!-- filtering -->
+      <input
+        type="text"
+        id="txt-filter"
+        style="margin: 20px"
+        placeholder="enter username here"
+      />
+
+      <div id="img-container"></div>
+
+      <hr />
+
+      <div id="all-users" class="row"></div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
