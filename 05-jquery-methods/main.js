@@ -3,9 +3,11 @@ $(document).ready(function () {
 
     // jQuery POST -> to create the data
     $("#btnGetData").click(function () {
-        $.post("https://jsonplaceholder.typicode.com/posts", { title: "NEW TITLE", body: "..." }, function (data, status, xhr) {
-            console.log("STATUS : ", status)
-        })
+        $.post("https://jsonplaceholder.typicode.com/posts",
+            { title: "NEW TITLE", body: "..." },
+            function (data, status, xhr) {
+                console.log("STATUS : ", status)
+            })
     })
 
     // jQuery GET -> to retrive the data

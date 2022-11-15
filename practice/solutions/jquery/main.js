@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
     // Q8
-    let emailEl = $(".email");
-    $.each(emailEl, function (index, value) {
-        let emailText = $(this).text();
-        emailText = emailText.replace(" at ", "@")
-        emailText = emailText.replace(" dot ", ".")
-        $(this).replaceWith(`<a href='mailto:${emailText}'>${emailText}</a><br/>`)
-    })
+    // let emailEl = $(".email");
+    // $.each(emailEl, function (index, value) {
+    //     let emailText = $(this).text();
+    //     emailText = emailText.replace(" at ", "@")
+    //     emailText = emailText.replace(" dot ", ".")
+    //     $(this).replaceWith(`<a href='mailto:${emailText}'>${emailText}</a><br/>`)
+    // })
 
 
 
