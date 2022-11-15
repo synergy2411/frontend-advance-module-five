@@ -20,3 +20,22 @@
 - npm install -g json-server
 - Create the db.json file
 - json-server --watch db.json
+
+- . : selects everything
+- [a-z] :
+- [A-Z] :
+- [0-9] :
+- [^4-7] :
+
+# Repetitions
+
+- (\*) : Zero or more occurances
+- (+) : One or more occurance
+- (?) : Zero or One time occurance
+- ( { } ) : specifies number of occurance
+
+- ^ : Start of line
+- $ : End of line
+- () : Grouping
+- \ : Escape for special characters
+- | : evaluating multiple expression

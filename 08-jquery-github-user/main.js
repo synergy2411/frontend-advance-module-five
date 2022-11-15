@@ -21,7 +21,7 @@ $(document).ready(function () {
             let divEl = document.createElement("div")
             $(divEl).addClass("col-4")
             $(divEl).html(`
-                    <div class='card' style='width: 18rem;'>
+                    <div class='card' style='width: 12rem;'>
                         <img src=${user.avatar_url} class="card-img-top">
                         <div class='card-body'>
                             <p class='text-center'> 
@@ -37,7 +37,6 @@ $(document).ready(function () {
     const getAllUsers = () => {
         $.get("https://api.github.com/users",
             function (data, status) {
-                console.log(data);
                 displayUsers(data)
                 users = data;
             })
