@@ -39,3 +39,30 @@
 - () : Grouping
 - \ : Escape for special characters
 - | : evaluating multiple expression
+
+# Modifiers
+- g : Global Search
+- i : Case-insensitivity
+- m : Multiline search
+
+# Shorthands
+- \w
+- \d
+- \s
+
+# Greedy and Lazy Matching
+- .* : selects everything
+- .*? : selects till first occurance
+
+
+
+- select the telephone number
+  - should starts with either 8 or 9
+  - should only have 10 digits
+  - eg. 9123456780      --> OK
+  - eg. 8123456780      --> OK
+  - eg. 1234567890      --> NOT OK
+  - eg. 934567890       --> NOT OK
+  - eg. 834567890       --> NOT OK
+
+  
